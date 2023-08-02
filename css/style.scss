@@ -4,6 +4,7 @@
 li,a{
   text-decoration: none;
   list-style: none;
+  color: #010101;
 }
 body {
   margin: 0;
@@ -18,8 +19,9 @@ header{
   background:rgba(255,255,255,0.7);
   position: relative;
  height: 5rem;
- z-index:100 ;
+ z-index:1000 ;
  width: 100%;
+
   @media screen and (max-width:768px) {
     padding: 0rem 0rem 0rem 1rem; 
     column-gap: 1rem;
@@ -66,7 +68,7 @@ padding: 1rem;}
   position: fixed;
   top: -40px;
   left: -150px;
-  z-index: 100000;
+  z-index: 10;
   opacity: 0;
   text-align: center;
   visibility: hidden;
@@ -86,10 +88,13 @@ padding: 1rem;}
   left: 50px;
 }
 #hamburger-navigation .sections {
-  margin-top: 110px;
-  z-index: 10000;
+  z-index: 10;
   position: relative;
-}
+  left: 150px;
+  background: rgba(255,255,255,0.7);
+  text-align: left;
+  padding: 0rem 0 1rem 1rem;
+  margin: 7rem 0 0 0;}
 #hamburger-navigation .sections li {
   margin-bottom: 10px;
 }
@@ -168,23 +173,34 @@ z-index:1000000;
 font-size: 36px;
 font-family: "Noto Serif JP";
 bottom: 0;
-  left: 0;
   right: 0;
-  top:600px;
-  @media screen and (max-width:768px) {
+  left: 125px;
+    top: 450px;
+    line-height: 2;
   
+  @media screen and (max-width:768px) {
+    position: initial;
+    font-size: 28px;
+    font-family: "Noto Serif JP";
+    text-align: center;
+    line-height: 2;
+    font-weight: 400;
   }
 }
 .nav-btn2{
   display: none;
   @media screen and (max-width:768px) {
-    width: 40%;
-    position: relative;
-    top:100px;
+    margin: 1rem 4rem;
+  width: 65%;
   background-color: #0097a7;
   border-radius: 1rem;
   font-family: "Noto Sans JP";
-  font-size: 16px;}}
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}}
   
 
 
@@ -294,7 +310,9 @@ text-align: center;
   }
 .feature {
   margin: 3rem 3rem;
-}
+  @media screen and (max-width:768px) {
+  margin: 2rem 1rem;
+}}
   .feature1,.feature2,.feature3{
     margin: 3rem 0;
   }
@@ -315,15 +333,28 @@ text-align: center;
     font-family: "Noto Serif JP";
     color: #606060;
     @media screen and (max-width:768px) {
-      font-size: 32px;}}
-      .gmap {
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.5;}}
+  
+.gmap {
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 2rem;
         margin: 2rem 0;
     }
+    .pc-map{ 
+      display: block;
+      @media screen and (max-width:768px) {
+        display: none;
+      }}
 
+      .sp-map{ 
+        display: none;
+        @media screen and (max-width:768px) {
+          display: block;
+        }}
   caption{
     font-size: 32px;
     font-family: "Noto Sans JP";
@@ -342,7 +373,10 @@ text-align: center;
     row-gap: 0.5rem;
     align-content: center;
     justify-content: center;
-    align-items: stretch;}
+    align-items: stretch;
+    @media screen and (max-width:768px) {
+      margin: 2rem 0;
+    }}
   tr {
     display: flex;
     column-gap: 0.5rem;
@@ -358,33 +392,51 @@ text-align: center;
     
     @media screen and (max-width:768px) {
       font-size: 12px;
+      padding: 2rem 0;
+    width: 32%;
     }}
     td{
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       width: 80%;
       font-size: 16px;
       font-family: "Noto Sans JP";
       background-color: #eeeeee;
       margin-bottom: 0.5rem;
   @media screen and (max-width:768px) {
-    font-size: 12px;}}
+    font-size: 12px;
+    padding: 0.5rem 2rem;}}
   
    .time-t{
-    width: 70%;
+    @media screen and (max-width:768px) {
 }
+    }
     tbody tr:last-child td:last-child {
       border-radius: 0 0 20px 0;
+    }
+    .time-t tr:last-child td:last-child {
+      border-radius: 0 0 0px 0;
     }
     tbody tr:last-child th:last-child {
       border-radius: 0 0 0 20px;
     }
-  
+    .time-t tr td:nth-child(2) {
+      padding: 0;
+      min-width: 95px;
+      @media screen and (max-width:768px) {
+        min-width: 35px;
+    }}
     .price{
         display: flex;
+        flex-direction: row;
         column-gap: 5rem;
         justify-content: center;
         align-items: center;
-        margin:3rem 15rem 1rem;}
+        margin: 3rem 12rem 1rem;
+        @media screen and (max-width:768px) {
+        flex-direction: column;
+        row-gap: 2rem;
+        margin: 3rem 0 1rem;
+    }}
     .price1,.price2{
       display: flex;
       flex-direction: column;
@@ -395,6 +447,7 @@ text-align: center;
     font-family: "Noto Sans JP";
     @media screen and (max-width:768px) {
       font-size: 12px;
+      line-height: 1.5;
         }    }
     .price-t{
       background-color: #0097a7;
@@ -414,6 +467,7 @@ text-align: center;
       padding: 1rem;    
       @media screen and (max-width:768px) {
         font-size: 60px;
+        padding: 1rem 0.5rem;
       }}
       .zei{ color:  #0097a7;
         font-size: 24px;
@@ -427,24 +481,45 @@ text-align: center;
   column-gap: 3rem;
   margin: 3rem 5rem;
   @media screen and (max-width:768px) {
-  flex-direction: column; 
-}}
+  flex-direction: column;
+  margin: 0;
+  column-gap: 0rem;}} 
+.animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 1s;
+	transform: translateY(30px);
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
       .detail1,.detail2 {
     display: flex;
     flex-direction: column;
-}
+    margin: 0;
+    @media screen and (max-width:768px) {
+    margin: 1rem 0;
+}}
 .detail-text {
   font-family: "Noto Sans JP";
   font-size: 16px;
   padding: 1rem 4rem;
   @media screen and (max-width:768px) {
     font-size: 12px;
+    padding: 1rem 1rem;
+    line-height: 1.5;
   }}
  .address{
   font-size: 24px;
   font-family: "Noto Sans JP";
   text-align: center;
- }
+  @media screen and (max-width:768px) {
+    font-size: 18px;
+    line-height: 1.5;
+ }}
   .time-table {
     display: flex;
     align-items: center;
@@ -469,7 +544,9 @@ color: #fefefe;
     font-weight: 400;
     margin:0;
 @media screen and (max-width:768px) {
-  font-size: 12px;}
+  font-size: 12px;
+padding: 0;
+height:30px;}
   }
   
   .time-table td {
@@ -479,7 +556,11 @@ color: #fefefe;
       font-weight: 400;
       background-color: white;
       padding: 0rem 2.5rem;
-  }
+      @media screen and (max-width:768px) {
+    padding: 0;
+    min-width: 35px;
+
+  }}
   
   .time-table td .time {
    color:#3c3c3c;
@@ -496,14 +577,17 @@ color: #fefefe;
    .time-table th, .time-table td {
     min-width: 40px;
     width:100%;
-    padding:0px 15px;
-  
-   }
+    @media screen and (max-width:768px) {
+    min-width: 35px;
+   }}
   
 
 
    .faq {
     margin: 3rem 8rem;
+    @media screen and (max-width:768px) {
+      margin: 2rem 0rem;
+  }
 }
    .accordion-005 {
     margin: auto;
