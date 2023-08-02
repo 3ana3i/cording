@@ -1,2 +1,0 @@
-# visul studio code
-rennsyu
