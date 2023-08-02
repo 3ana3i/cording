@@ -24,9 +24,9 @@
   </div>
   <div class="pc-navbar">  
     <nav class="nav-list">
-    <li class="nav-item">施設概要</li>
-    <li class="nav-item">アクセス</li>
-    <li class="nav-item">問い合わせ</li>
+    <li class="nav-item"> <a href="#feature">施設概要</a></li>
+    <li class="nav-item"><a href="#access">アクセス</a></li>
+    <li class="nav-item"><a href="#contact">問い合わせ</a></li>
   </nav>
   <div class="nav-btn">
     <p class="btn">無料カウンセリング&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></p>
@@ -37,11 +37,11 @@
   <nav id="hamburger-navigation">
     <ul class="sections">
       <li>
-        <a href="#about" class="hamburger-menu-section">施設概要</a>
+        <a href="#feature" class="hamburger-menu-section">施設概要</a>
       </li>
-      <li><a href="#service" class="hamburger-menu-section">アクセス</a></li>
+      <li><a href="#access" class="hamburger-menu-section">アクセス</a></li>
       <li>
-        <a href="#works" class="hamburger-menu-section">問い合わせ</a>
+        <a href="#contact" class="hamburger-menu-section">問い合わせ</a>
       </li>
     </ul>
   </nav>
@@ -75,11 +75,11 @@
     </li>
   </ul>
 </div>
+</section>
 <div class="slide-title"><h2>いつまでもキレイでいたい<br>全ての女性のために</h2></div>
 <div class="nav-btn2">
   <p class="btn">無料カウンセリング&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></p>
 </div>
-</section>
 
 
 <div class="box1">
@@ -141,7 +141,7 @@
     </div>
   </div>
 </section>
-<section class="feature">
+<section id="feature" class="feature">
 <h1>４つの特徴</h1>
 <div class="feature1">
   <div class="sub-title">
@@ -199,13 +199,13 @@
 
 <div class="detail">
 <div class="detail1">
-  <img src="./img/point3_01.jpg">
+  <img src="./img/point3_01.jpg" class="animation">
   <span class="detail-text">カーテンで区切られた半個室ではなく、扉をしめること
 でプライベートな時間を完全に確保できる個室をご用意
 しております。</span>
 </div>
 <div class="detail2">
-  <img src="./img/point3_02.jpg">
+  <img src="./img/point3_02.jpg" class="animation">
   <span class="detail-text">リラックスした時間をお過ごしいただくために、その時
 の気分に合わせて、お好きなアロマをお選びいただくこ
 とができます。
@@ -214,13 +214,16 @@
 </div>
 </div>
 
-<div class="feature4">
+<div id="access" class="feature4">
   <div class="sub-title">
     <span class="sub-title">04.</span>
     <span class="sub-text">アクセス便利な東京駅から徒歩3分 </span>
   </div>
-<div class="gmap">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707415!2d139.76454987532168!3d35.6812405299742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2suk!4v1690968268062!5m2!1sja!2suk" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="gmap">
+<div class="pc-map">
+  <iframe class="pc-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707415!2d139.76454987532168!3d35.6812405299742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2suk!4v1690968268062!5m2!1sja!2suk" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="sp-map">
+  <iframe class="sp-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.832796745761!2d139.7639311253218!3d35.68111882998093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2suk!4v1690979606866!5m2!1sja!2suk" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
   <p class="price-text">JR東京駅丸の内地下中央口改札から出て徒歩3分。雨の日でも濡れずにお越しいただくことができます。</p>
   
 </div>
@@ -269,7 +272,7 @@
 </div>
 </div>
 </section>
-<section class="contact">
+<section id="contact" class="contact">
   <div class="contact">
     <h1>美容に特化した医師が監修したサロン</h1>
     <div class="contact-list">
@@ -334,6 +337,7 @@
 <script src="https://kit.fontawesome.com/902ddb73be.js" crossorigin="anonymous"></script>
 <script src="./js/slick.js"></script>
 <script src="./js/hamburger.js"></script>
+<script src="./js/animation.js"></script>
 </body>
 
 </html>
